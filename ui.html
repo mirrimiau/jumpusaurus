@@ -6,47 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jumpusaurus v0.0</title>
-    <script>
-        function randomY()
-        {
-            return ((Math.random() * 200) + 300); // 400 is the height currently
-        }
-
-        function randomFactor(a, f) // outputs [a - a*f, a + a*f]
-        {
-            return (a + a*f*((Math.random()*2) - 1));
-        }
-
-        function draw() {
-            var canvas = document.getElementById('ui');
-            if (canvas.getContext) {
-                var ctx = canvas.getContext('2d');
-            }
-
-            ctx.strokeStyle = 'grey';
-            var y = 350;
-            var i = 0;
-
-            ctx.beginPath();
-            ctx.moveTo(0, y);
-            while (i < 30)
-            {
-                i++;
-                y = randomFactor(y, 0.01*i);
-                ctx.lineTo(50*i, y);
-                ctx.stroke();
-            }
-            
-/*             while (i < 5)
-            {
-                ctx.moveTo(50 * i, y);
-
-                i++;
-                y = Math.random * 400;
-                ctx.lineTo(50 * i, y);
-                ctx.stroke();
-            } */
-        }
+    <script src="platform.js">
     </script>
     <style>
         canvas {
@@ -55,7 +15,7 @@
     </style>
 </head>
 
-<body onload="draw();">
+<body onload="createMap();">
     <canvas id="ui" width="1500" height="400"></canvas>
 </body>
 
