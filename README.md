@@ -6,6 +6,6 @@ This simulates a "rising difficulty" for the mover in the map if the aim was
 to advance as far as possible in the game. So basically smooth slopes at first, 
 then bigger and bigger mountains and valleys.
 
-Logic written with javascript and visualized in html. To use download both files and tun .html
+Logic written with javascript and visualized in html. To use download both files and run .html
 file in a browser. Refreshing creates a new random map. After each iteration of the map, an info
 bubble appears to give the actual map data that would be used by the game.
